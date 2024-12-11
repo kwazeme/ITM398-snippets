@@ -2,15 +2,16 @@
 echo '$inputString = ' . $inputString . '<br>';
 
 //get_closest_match
-echo 'aaaaaH';
+//echo 'aaaaaH';
 
-// Query to fetch possible values from a specific field
+// Query to fetch possible values from a specific field in databse table
 $sql = "SELECT id_number"
    . " FROM contact";
 sc_lookup(rs, $sql);
 
 
 //initialise dataset array
+//this adds all database table values into an array to be compared with the user input string.
 $dataset = array();
 
 if (isset({rs}) && !empty({rs})) {
@@ -58,7 +59,7 @@ if (isset({rs}) && !empty({rs})) {
             ];
         }*/
     }	
-var_dump($matches);
+//var_dump($matches);
 echo "the closest matches are: <hr>";	
 foreach ($closestMatches as $row) {
 	foreach ($row as $column => $value) {
